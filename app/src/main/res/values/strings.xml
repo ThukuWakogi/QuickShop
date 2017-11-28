@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">QuickShop</string>
+    <string name="emailText">email address</string>
+    <string name="passwordText">password</string>
+    <string name="loginText">login</string>
+    <string name="queryAccountPresenceText">Don\'t have an account? Sign Up</string>
+    <string name="welcome">welcome</string>
 </resources>

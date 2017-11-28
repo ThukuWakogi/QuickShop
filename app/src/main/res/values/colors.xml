@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="theLightKindaDarkWhite">#F0F0F0</color>
+    <color name="theDarkKindaDarkWhite">#DDDDDD</color>
+    <color name="theMoreDarkKindaDarkWhite">#CCCCCC</color>
+    <color name="darkGray">#606060</color>
 </resources>
