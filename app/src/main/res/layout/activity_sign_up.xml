@@ -16,11 +16,20 @@
         android:layout_marginRight="15dp"
         android:gravity="center"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:text="@string/signUpBanner"
+            android:textColor="@color/darkGray"
+            android:textSize="45sp"
+            android:textStyle="bold"/>
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <EditText
+                android:id="@+id/login_edittext"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/emailText"
@@ -29,8 +38,11 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:layout_margin="0dp"
-                android:singleLine="true"/>
+                android:singleLine="true"
+                android:inputType="textEmailAddress"/>
             <EditText
+                android:id="@+id/password_edittext"
+                android:inputType="textPassword|textVisiblePassword"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/passwordText"
@@ -38,15 +50,32 @@
                 android:paddingBottom="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
                 android:singleLine="true"/>
+            <EditText
+                android:id="@+id/confirm_password_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirmPasswordText"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_margin="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:singleLine="true"
+                android:inputType="textPassword|textVisiblePassword"/>
         </LinearLayout>
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="25dp"
             android:text="@string/loginText"
             android:textColor="@color/darkGray"

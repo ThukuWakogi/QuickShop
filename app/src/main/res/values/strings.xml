@@ -4,5 +4,7 @@
     <string name="passwordText">password</string>
     <string name="loginText">login</string>
     <string name="queryAccountPresenceText">Don\'t have an account? Sign Up</string>
-    <string name="welcome">welcome</string>
+    <string name="loginBanner">welcome!</string>
+    <string name="signUpBanner">join us!</string>
+    <string name="confirmPasswordText">confirm password</string>
 </resources>
