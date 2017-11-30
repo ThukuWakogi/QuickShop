@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "579429789224-2eoahrnhcr9tbsjpijtsr8htqsn1gfqu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.elvina.quickshop",
+            "certificate_hash": "8f866479617a9243d45d1b0ceac951e3ce8852eb"
+          }
+        },
+        {
           "client_id": "579429789224-thc3uiiac7k90a5ea2k392jr9l0t6kas.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579429789224-thc3uiiac7k90a5ea2k392jr9l0t6kas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

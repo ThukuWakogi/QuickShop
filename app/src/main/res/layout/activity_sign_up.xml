@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <EditText
-                android:id="@+id/login_edittext"
+                android:id="@+id/signup_email_edittext"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/emailText"
@@ -41,7 +41,7 @@
                 android:singleLine="true"
                 android:inputType="textEmailAddress"/>
             <EditText
-                android:id="@+id/password_edittext"
+                android:id="@+id/signup_password_edittext"
                 android:inputType="textPassword|textVisiblePassword"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -73,15 +73,17 @@
                 android:inputType="textPassword|textVisiblePassword"/>
         </LinearLayout>
         <Button
+            android:id="@+id/signup_button"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="25dp"
-            android:text="@string/loginText"
+            android:text="@string/signupText"
             android:textColor="@color/darkGray"
             android:background="@drawable/qs_button"/>
     </LinearLayout>
     <TextView
+        android:id="@+id/queryAccountPresenceTextView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/queryAccountPresenceText"

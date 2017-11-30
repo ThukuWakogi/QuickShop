@@ -3,7 +3,9 @@
     <string name="emailText">email address</string>
     <string name="passwordText">password</string>
     <string name="loginText">login</string>
-    <string name="queryAccountPresenceText">Don\'t have an account? Sign Up</string>
+    <string name="signupText">sign up</string>
+    <string name="queryAccountAbsenceText">Don\'t have an account? Sign Up</string>
+    <string name="queryAccountPresenceText">Have an account? Sign in</string>
     <string name="loginBanner">welcome!</string>
     <string name="signUpBanner">join us!</string>
     <string name="confirmPasswordText">confirm password</string>
