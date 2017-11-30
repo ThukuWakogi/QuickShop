@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "579429789224",
+    "firebase_url": "https://quickshop-5f5db.firebaseio.com",
+    "project_id": "quickshop-5f5db",
+    "storage_bucket": "quickshop-5f5db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579429789224:android:88aca3ee6236f452",
+        "android_client_info": {
+          "package_name": "com.example.elvina.quickshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579429789224-thc3uiiac7k90a5ea2k392jr9l0t6kas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw8oMnnhXDmXpBoD47w-6oUBXBi5yOojE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
