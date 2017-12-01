@@ -50,7 +50,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
 
     private void registerUser() {
         String email = emailEditText.getText().toString().trim();
-        String password = passwordEditText.getText().toString().trim();
+        final String password = passwordEditText.getText().toString().trim();
         String passwordConfirmation = confirmPasswordEditText.getText().toString().trim();
 
         if (TextUtils.isEmpty(email)) {
@@ -84,6 +84,11 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
                             finish();
                             startActivity(new Intent(getApplicationContext(), SuccessfullyIn.class));
                         } else {
+                            progressDialog.dismiss();
+                            emailEditText.setText("");
+                            passwordEditText.setText("");
+                            confirmPasswordEditText.setText("");
+                            progressDialog.dismiss();
                             Toast.makeText(SignUp.this, "registration failed, please try again", Toast.LENGTH_SHORT).show();
                         }
                     }

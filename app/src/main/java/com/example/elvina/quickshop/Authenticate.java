@@ -76,6 +76,7 @@ public class Authenticate extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isComplete()) {
                             Toast.makeText(getApplicationContext(), "logged in!", Toast.LENGTH_SHORT).show();
+                            progressDialog.dismiss();
                             finish();
                             startActivity(new Intent(getApplicationContext(), SuccessfullyIn.class));
                         } else {
