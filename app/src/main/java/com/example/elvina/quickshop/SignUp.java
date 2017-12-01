@@ -1,7 +1,9 @@
 package com.example.elvina.quickshop;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -33,12 +35,14 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        ActionBar actionBar = getSupportActionBar();
+        if (!(null == actionBar)) actionBar.hide();
         mAuth = FirebaseAuth.getInstance();
-        emailEditText = findViewById(R.id.signup_email_edittext);
-        passwordEditText = findViewById(R.id.signup_password_edittext);
-        confirmPasswordEditText = findViewById(R.id.confirm_password_edittext);
+        emailEditText = findViewById(R.id.signUpEmailEditText);
+        passwordEditText = findViewById(R.id.signUpPasswordEditText);
+        confirmPasswordEditText = findViewById(R.id.confirmPasswordEditText);
         queryAccountPresenceTextView = findViewById(R.id.queryAccountPresenceTextView);
-        signUpButton = findViewById(R.id.signup_button);
+        signUpButton = findViewById(R.id.signUpButton);
         progressDialog = new ProgressDialog(this);
         queryAccountPresenceTextView.setOnClickListener(this);
         signUpButton.setOnClickListener(this);
@@ -77,6 +81,8 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(SignUp.this, "registered successfully", Toast.LENGTH_SHORT).show();
+                            finish();
+                            startActivity(new Intent(getApplicationContext(), SuccessfullyIn.class));
                         } else {
                             Toast.makeText(SignUp.this, "registration failed, please try again", Toast.LENGTH_SHORT).show();
                         }
@@ -86,6 +92,10 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-        registerUser();
+        if (signUpButton == view) registerUser();
+        if (queryAccountPresenceTextView == view) {
+            finish();
+            startActivity(new Intent(this, Authenticate.class));
+        }
     }
 }

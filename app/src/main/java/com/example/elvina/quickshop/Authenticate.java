@@ -3,6 +3,7 @@ package com.example.elvina.quickshop;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -20,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Authenticate extends AppCompatActivity implements View.OnClickListener{
     private EditText loginEmailEditText;
     private EditText loginPasswordEditText;
-    private Button loginButton;
+    private Button logInButton;
     private TextView queryAccountAbsenceTextView;
     private ProgressDialog progressDialog;
     private FirebaseAuth mAuth;
@@ -30,19 +31,21 @@ public class Authenticate extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authenticate);
 
-        loginEmailEditText = findViewById(R.id.login_email_edittext);
-        loginPasswordEditText = findViewById(R.id.login_password_edittext);
-        loginButton = findViewById(R.id.login_button);
+        ActionBar actionBar = getSupportActionBar();
+        if (!(null == actionBar)) actionBar.hide();
+        loginEmailEditText = findViewById(R.id.logInEmailEdittext);
+        loginPasswordEditText = findViewById(R.id.logInPasswordEdittext);
+        logInButton = findViewById(R.id.logInButton);
         queryAccountAbsenceTextView = findViewById(R.id.queryAccountAbsenceTextView);
         progressDialog = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
-        loginButton.setOnClickListener(this);
+        logInButton.setOnClickListener(this);
         queryAccountAbsenceTextView.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        if (view == loginButton) userLogin();
+        if (view == logInButton) userLogin();
 
         if (view == queryAccountAbsenceTextView) {
             finish();
@@ -50,11 +53,7 @@ public class Authenticate extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
-    }
-
+    //This method authenticates the user.
     private void userLogin() {
         String email = loginEmailEditText.getText().toString().trim();
         String loginPassword = loginPasswordEditText.getText().toString().trim();
@@ -75,8 +74,14 @@ public class Authenticate extends AppCompatActivity implements View.OnClickListe
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isComplete()) Toast.makeText(getApplicationContext(), "logged in!", Toast.LENGTH_SHORT).show();
-                        else Toast.makeText(getApplicationContext(), "email or password incorrect", Toast.LENGTH_SHORT).show();
+                        if (task.isComplete()) {
+                            Toast.makeText(getApplicationContext(), "logged in!", Toast.LENGTH_SHORT).show();
+                            finish();
+                            startActivity(new Intent(getApplicationContext(), SuccessfullyIn.class));
+                        } else {
+//                            Toast.makeText(getApplicationContext(), "email or password incorrect", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
                     }
                 });
     }

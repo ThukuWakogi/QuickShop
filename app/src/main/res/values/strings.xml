@@ -9,4 +9,8 @@
     <string name="loginBanner">welcome!</string>
     <string name="signUpBanner">join us!</string>
     <string name="confirmPasswordText">confirm password</string>
+    <string name="logOutText">log out</string>
+    <string name="successfullyIn">You are in!</string>
+    <string name="proofStatement">to verify this, your email must be</string>
+    <string name="logOutRequestText">Fill free to log out at your own time</string>
 </resources>
