@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 27
@@ -30,6 +29,8 @@ dependencies {
     compile 'com.google.gms:google-services:3.1.2'
     compile 'com.android.support:design:27.0.1'
     compile 'com.android.support:mediarouter-v7:27.0.1'
-    compile 'com.google.firebase:firebase-auth:11.6.2'
     compile 'com.google.firebase:firebase-core:11.6.2'
+    compile 'com.google.firebase:firebase-auth:11.6.2'
 }
+
+apply plugin: 'com.google.gms.google-services'
