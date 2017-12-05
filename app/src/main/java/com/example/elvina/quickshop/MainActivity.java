@@ -2,16 +2,13 @@ package com.example.elvina.quickshop;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
-    private FirebaseAuth mAuth;
-    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,22 +22,10 @@ public class MainActivity extends AppCompatActivity {
         */
         ActionBar actionBar = getSupportActionBar();
         if (!(null == actionBar)) actionBar.hide();
-        progressDialog = new ProgressDialog(this);
+        ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Getting this ready...");
         progressDialog.show();
-        mAuth = FirebaseAuth.getInstance();
-        if (mAuth.getCurrentUser() == null ) {
-            finish();
-            startActivity(new Intent(this, Authenticate.class));
-        } else {
-            finish();
-            startActivity(new Intent(this, SuccessfullyIn.class));
-        }
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (FirebaseAuth.getInstance().getCurrentUser() == null ) startActivity(new Intent(this, Authenticate.class));
+        else startActivity(new Intent(this, SuccessfullyIn.class));
     }
 }

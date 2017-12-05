@@ -1,15 +1,13 @@
 package com.example.elvina.quickshop;
 
 import android.content.Intent;
-import android.drm.DrmStore;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -31,7 +29,6 @@ public class SuccessfullyIn extends AppCompatActivity implements View.OnClickLis
 
         if (firebaseAuth.getCurrentUser() == null) {
             Toast.makeText(this, "Access failed", Toast.LENGTH_SHORT).show();
-            finish();
             startActivity(new Intent(this, Authenticate.class));
         }
 
@@ -45,7 +42,6 @@ public class SuccessfullyIn extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         if (view == logOutButton) {
             firebaseAuth.signOut();
-            finish();
             startActivity(new Intent(this, Authenticate.class));
         }
     }

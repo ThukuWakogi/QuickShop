@@ -77,11 +77,7 @@ public class Authenticate extends AppCompatActivity implements View.OnClickListe
                         if (task.isComplete()) {
                             Toast.makeText(getApplicationContext(), "logged in!", Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
-                            finish();
                             startActivity(new Intent(getApplicationContext(), SuccessfullyIn.class));
-                        } else {
-//                            Toast.makeText(getApplicationContext(), "email or password incorrect", Toast.LENGTH_SHORT).show();
-                            return;
                         }
                     }
                 });
