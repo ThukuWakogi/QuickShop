@@ -48,7 +48,6 @@ public class Authenticate extends AppCompatActivity implements View.OnClickListe
         if (view == logInButton) userLogin();
 
         if (view == queryAccountAbsenceTextView) {
-            finish();
             startActivity(new Intent(this, SignUp.class));
         }
     }

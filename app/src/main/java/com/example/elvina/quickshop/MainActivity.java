@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if (!(null == actionBar)) actionBar.hide();
         ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Getting this ready...");
+        progressDialog.setMessage("Getting things ready...");
         progressDialog.show();
         if (FirebaseAuth.getInstance().getCurrentUser() == null ) startActivity(new Intent(this, Authenticate.class));
         else startActivity(new Intent(this, SuccessfullyIn.class));

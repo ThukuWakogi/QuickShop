@@ -22,9 +22,10 @@
         </activity>
         <activity
             android:name=".Authenticate"
-            android:label="@string/loginText"></activity>
+            android:label="@string/loginText" />
         <activity android:name=".SignUp" />
-        <activity android:name=".SuccessfullyIn"></activity>
+        <activity android:name=".SuccessfullyIn" />
+        <activity android:name=".profileModification"></activity>
     </application>
 
 </manifest>

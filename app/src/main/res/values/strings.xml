@@ -13,4 +13,7 @@
     <string name="successfullyIn">You are in!</string>
     <string name="proofStatement">to verify this, your email must be</string>
     <string name="logOutRequestText">Fill free to log out at your own time</string>
+    <string name="registerSpinnerPromptText">choose type to register as</string>
+    <string name="registerTypeDeliverer">deliverer</string>
+    <string name="registerTypeReceiver">receiver</string>
 </resources>
