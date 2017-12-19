@@ -25,7 +25,7 @@
             android:label="@string/loginText" />
         <activity android:name=".SignUp" />
         <activity android:name=".SuccessfullyIn" />
-        <activity android:name=".profileModification"></activity>
+        <activity android:name=".profileModification" android:label="@string/profileLabelText"/>
     </application>
 
 </manifest>

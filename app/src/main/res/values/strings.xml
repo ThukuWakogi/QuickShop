@@ -16,4 +16,5 @@
     <string name="registerSpinnerPromptText">choose type to register as</string>
     <string name="registerTypeDeliverer">deliverer</string>
     <string name="registerTypeReceiver">receiver</string>
+    <string name="profileLabelText">profile</string>
 </resources>
