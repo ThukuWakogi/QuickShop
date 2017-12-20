@@ -97,7 +97,7 @@
             android:layout_marginRight="0dp"
             android:singleLine="true"/>
         <EditText
-            android:id="@+id/postalAddress"
+            android:id="@+id/postalAddressEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPostalAddress"
@@ -130,7 +130,7 @@
             android:layout_marginLeft="@dimen/buttonPadding"
             android:layout_marginRight="@dimen/buttonPadding"/>
         <Button
-            android:id="@+id/changeDetailButtonText"
+            android:id="@+id/changeDetailsButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/changeDetailButtonText"
