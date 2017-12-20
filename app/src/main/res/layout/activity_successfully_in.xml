@@ -47,6 +47,15 @@
             android:text="@string/logOutText"
             android:textColor="@color/darkGray"
             android:background="@drawable/qs_button"/>
+        <Button
+            android:id="@+id/tempToProfileModificationButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp"
+            android:text="@string/tempToProfileModificationButton"
+            android:textColor="@color/darkGray"
+            android:background="@drawable/qs_button"/>
     </LinearLayout>
 </RelativeLayout>
 

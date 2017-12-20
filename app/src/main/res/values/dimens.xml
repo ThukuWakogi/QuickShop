@@ -2,4 +2,6 @@
 <resources>
     <dimen name="activity_horizontal_margin">5dp</dimen>
     <dimen name="activity_vertical_margin">5dp</dimen>
+    <dimen name="buttonPadding">15dp</dimen>
+    <dimen name="buttonInnerPadding">10dp</dimen>
 </resources>

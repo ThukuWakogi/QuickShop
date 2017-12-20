@@ -17,4 +17,12 @@
     <string name="registerTypeDeliverer">deliverer</string>
     <string name="registerTypeReceiver">receiver</string>
     <string name="profileLabelText">profile</string>
+    <string name="tempToProfileModificationButton">Temp: to profile modification</string>
+    <string name="firstNameHintText">first name</string>
+    <string name="lastNameHintText">last name</string>
+    <string name="postalAddressHintText">postal address</string>
+    <string name="streetHintText">street</string>
+    <string name="phoneNumberHintEditText">phone number</string>
+    <string name="changeDetailButtonText">Change Details</string>
+    <string name="backButtonText">go back</string>
 </resources>

@@ -13,6 +13,6 @@ public class profileModification extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_modification);
 
-        getActionBar().setBackgroundDrawable(new ColorDrawable(parseColor("#3F3F3F")));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(parseColor("#3F3F3F")));
     }
 }

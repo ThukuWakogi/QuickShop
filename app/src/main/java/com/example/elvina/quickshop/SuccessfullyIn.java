@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SuccessfullyIn extends AppCompatActivity implements View.OnClickListener{
     private Button logOutButton;
+    private Button tempToProfileModificationButton;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -26,6 +27,7 @@ public class SuccessfullyIn extends AppCompatActivity implements View.OnClickLis
         firebaseAuth = FirebaseAuth.getInstance();
         TextView proofStatementTextView = findViewById(R.id.proofStatementTextView);
         logOutButton = findViewById(R.id.logOutButton);
+        tempToProfileModificationButton = findViewById(R.id.tempToProfileModificationButton);
 
         if (firebaseAuth.getCurrentUser() == null) {
             Toast.makeText(this, "Access failed", Toast.LENGTH_SHORT).show();
@@ -36,6 +38,7 @@ public class SuccessfullyIn extends AppCompatActivity implements View.OnClickLis
         proofStatementTextView.append(String.format("\n%s", user != null ? user.getEmail() : null));
         proofStatementTextView.setOnClickListener(this);
         logOutButton.setOnClickListener(this);
+        tempToProfileModificationButton.setOnClickListener(this);
     }
 
     @Override
@@ -44,5 +47,7 @@ public class SuccessfullyIn extends AppCompatActivity implements View.OnClickLis
             firebaseAuth.signOut();
             startActivity(new Intent(this, Authenticate.class));
         }
+
+        if (view == tempToProfileModificationButton) startActivity(new Intent(this, profileModification.class));
     }
 }
